@@ -1,0 +1,63 @@
+		
+	.mainTitleHead{
+		font-size: 28px; 
+		font-weight: bold;
+		background-color: #8A716A;
+		border-style: none;
+		color: #DDDCD9;
+		padding: 12px 12px;
+		text-align: center;
+		text-decoration: none;
+		font-family: Tahoma;
+		}
+		
+		.sectionHead{
+		font-size: 20px; 
+		font-weight: bold;
+		background-color: #8A716A;
+		border-style: none;
+		color: #DDDCD9;
+		padding: 6px 6px;
+		text-align: center;
+		text-decoration: none;
+		font-family: Tahoma;
+		}
+		
+	
+	.centerDiv{
+		text-align:center
+	}
+	
+	.tabButton {
+		background-color: #8A716A;
+		border-style: none;
+		color: #DDDCD9;
+		padding: 12px 12px;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		font-family: Tahoma;
+}
+	
+		.someBody {
+		border-style: none;
+		color: #DDDCD9;
+		font-size: 14px;
+		font-family: Tahoma;
+}
+
+	.left{
+		float: left;
+		text-align:left;
+		}
+	.right{
+		float: right;
+
+}
+	.center{
+		text-align:left;
+		margin:0 auto ; 
+		display:inline-block
+}
