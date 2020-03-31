@@ -1,0 +1,187 @@
+<html>
+<head>
+	<div class="center">
+	<title>In Class Activity 7: Javascript</title>
+	<H2>In Class Activity 7: Javascript<br>Various lil' functions</H2>
+	<!-- This is the css from assignment 6 that i didnt end up submitting
+		im just using it for a few things like bold and centering things-->
+	<link rel="stylesheet" type="text/css" href="./act7style.css" title="style" />
+	</div>
+</head>
+<!-- place holder for copying -->
+<!-- I havent been good about commenting my code becuase using the html comment
+indicators is much harder than the "//" in c based languages. I'm going to try to
+be more liberal with my use of them in future assingments -->
+<body>
+
+<p><span class="boldFont">Q1: Fibonacci</span><br>
+This does a Fibonacci sequence for n=15
+</p>
+<!-- This is how i've seen examples making javascript write to the page
+so thats how i implemented it -->
+<p id="fibo"></p>
+
+<p><span class="boldFont">Q2: Nested Loots & Asterisks</span></p>
+This does a loop to print each line and loop to increment the asterisks.<br>
+Technically this could be achieved with a single loop.<br>
+n still equals 15.
+<p id="nLoop"></p>
+
+<p><span class="boldFont">Q3: Sorting an array</span></p>
+Uses the sort funtion to sort a defined array<br>
+Unsorted:
+<p id="unsorted"></p>
+Sorted:
+<p id="sorted"></p>
+
+<p><span class="boldFont">Q4: Finding most frequent character in an array</span></p>
+Array: 
+<span id="findArray"></span>
+<br>
+Most occuring element: 
+<!-- I use a span to make it appear on the line of text i want to appear all the time 
+so i dont have to do that in javascript -->
+<span id="findEle"></span>
+<br>
+Occurances: 
+<span id="findCount"></span>
+
+<p><span class="boldFont">Q5: Shuffling an array</span>
+Uses the shuffle funtion to shuffle a defined array<br>
+</p>
+Unshuffled:
+<p id="unshuffled"></p>
+shuffled:
+<p id="shuffled"></p>
+
+<p><span class="boldFont">Q6: Validate Form</span>
+This checks the form for entering data.<br>
+If there's something in every field it prints below.
+</p>
+<form name="myForm" >
+	<label>ID: 
+		<input type="text" name="fID">
+	</label>
+	<br>
+	<label>First Name: 
+		<input type="text" name="fFirst">
+	</label>
+	<br>
+	<label>Last Name: 
+		<input type="text" name="fLast">
+	</label>
+	<br>
+</form>
+<input onclick="validateForm();" type="submit" value="Submit">
+<br>
+<p id="formPrint"></p>
+
+
+
+
+<script>
+//Set up variables for the fib seq
+var prev1 = 1; 
+var prev2 = 0;
+var curr = 0;
+//do it 15 times
+var n = 15;
+var s = ""; //create some empty string variables
+var conCat = "";
+conCat = curr.toString(10);
+//Question 1
+////////////
+s = s.concat(conCat + ", "); 
+for (let step = 0; step < n; step++) {
+	conCat = curr.toString(10);
+    s = s.concat(conCat); 
+	//if its the last number dont add a comma
+	//note: i made the expected result the default
+    if(step != n){
+    	s = s.concat(", "); 
+    }
+	curr=prev1+prev2;
+    prev2=prev1;
+    prev1=curr;
+}
+//print the concatonated string to the html page
+document.getElementById("fibo").innerHTML = s;
+
+//Question 2
+////////////
+s = "";//reset varialbe
+for (let step = 0; step < n; step++) {
+	for (let i = 0; i < step; i++) {
+		s = s.concat("* "); 
+	}
+	//this makes new lines 
+	s = s.concat("<br>");
+}
+document.getElementById("nLoop").innerHTML = s;
+
+//Question 3
+////////////
+var arr3 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+document.getElementById("unsorted").innerHTML = arr3;
+document.getElementById("sorted").innerHTML = arr3.sort();
+
+//Question 4
+////////////
+var arr4=[3, 'a', 'b', 'a', 2, 3, 'a', 3, 'b', 3, 'a', 'b', 'a', 2, 3, 'a', 3, 'b', 2, 4, 9, 3, 10, 10 ,10 ,10];
+//occurance tracker for tracked element
+var eleCount = 1;
+//intermediate counter
+var interCount = 0;
+//currently tracked element
+var element;
+for (let i=0; i<arr4.length; i++){
+	for (let j=i; j<arr4.length; j++){
+		if (arr4[i] == arr4[j]){
+			interCount++;
+		}
+		//If the currently analyzed element is bigger than any indexed element yet
+		//make it the recorded element
+        if (eleCount<interCount){
+			eleCount=interCount; 
+			element = arr4[i];
+        }
+    }
+    interCount=0;
+}
+document.getElementById("findArray").innerHTML = arr4;
+document.getElementById("findEle").innerHTML = element;
+document.getElementById("findCount").innerHTML = eleCount;
+		
+//Question 5
+////////////
+var arr5 = [ 1,2,3,5,7,10 ];
+document.getElementById("unshuffled").innerHTML = arr5;
+//use a compund function to sort the array in a random order
+//This came from w3schools
+arr5.sort(function(a, b){return 0.5 - Math.random()});
+document.getElementById("shuffled").innerHTML = arr5;
+
+
+//Question 6
+////////////
+
+function validateForm() {
+  var idVal = document.forms["myForm"]["fID"].value;
+  var fname = document.forms["myForm"]["fFirst"].value;
+  var lname = document.forms["myForm"]["fLast"].value;
+  if (idVal == "" || fname == "" || lname == "") {
+    alert("All fields must be filled out");
+    return false;
+  }
+  else{
+	var printString = "ID: " + idVal + "<br>First Name: " + fname + "<br>Last Name: " + lname;
+	document.getElementById("formPrint").innerHTML = printString;
+  }
+}
+</script>
+
+
+
+
+</body>
+</html>

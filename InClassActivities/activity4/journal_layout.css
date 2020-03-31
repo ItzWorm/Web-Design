@@ -1,0 +1,74 @@
+	body {
+	background-image: url("background.gif");
+	}	
+	
+	#topDiv {
+	text-align: right;
+	background-color: #A8F0F0;
+	}
+		
+	#spanOne {
+	font-size: 14px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-left: 3px;
+	margin-right: 3px;
+		}
+		
+	#bodyBorder{
+	border: 10px white solid;
+	background-color: white;
+	justify-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	overflow:auto;
+	}
+	
+	#midBigContainer{
+		
+	}
+	
+	#midDivContainer{
+		float: left;
+		width: 70%;
+		margin-left: 2px;
+
+	}
+	
+	#midLeftContainer{
+		float: left;
+		width: 25%;
+		border: 4px #009097 solid;
+		background-color: #A8F0F0;
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		margin-top: 10px;
+		margin-bottom: 2px;
+		margin-left: 2px;
+		margin-right: 2px;
+
+	}
+	
+	.midDiv {
+		
+	border: 4px #C2E9E9 solid;
+	background-color: #E8FBFB;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	margin-top: 10px;
+	overflow:auto;
+		}
+		
+	.spanDate {
+	border-bottom: 2px #009097 dashed;
+		}
+		
+	img {
+		float: right;
+	}
+		
+		
