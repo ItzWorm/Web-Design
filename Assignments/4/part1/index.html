@@ -1,0 +1,46 @@
+<html>
+<head>
+	<div class="centerText">
+	<title>HW Assignment4:P1</title>
+	<H2>Homework Assignment 4: Part 1 <br>Payroll example</H2>
+	<link rel="stylesheet" type="text/css" href="./style.css" title="style" />
+	<script src="payroll.js"></script>
+	</div>
+</head>
+
+
+<body>
+
+<div class="flex-grid-thirds">
+	<!-- This is a space holder -->
+  <div class="col"></div>
+  <!-- Call the script here to put it in the middle 3rd of the screen -->
+  <div id="printHere" class="col centerText">
+
+
+    <table>
+		<tr>
+			<th>Employee #</th>
+			<th>Hours</th>
+			<th>Pay</th>
+		</tr>
+	<tbody id="printTable">
+	</tbody>
+	</table>
+  
+  
+  <p id="summary"></p>
+  
+  </div>
+  <script> getHours();
+  
+  
+  </script>
+
+  
+  <!-- This is a also space holder -->
+  <div class="col"></div>
+</div>
+
+</body>
+</html>

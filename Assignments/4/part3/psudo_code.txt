@@ -1,0 +1,11 @@
+Drop down with selection for pairs
+Drop down with selection for difficulty
+
+Draw pictures
+Start Count Down
+When count down ends
+	Draw Questionmarks for all pictures
+Show 1st card when clicked
+Show 2nd card when clicked
+if cards match fade images and leave blanck
+if cards do not match redraw questionmark for both

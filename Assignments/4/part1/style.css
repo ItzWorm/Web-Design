@@ -1,0 +1,25 @@
+table, th, td {
+  border: 1px solid black;
+}
+table {
+	/*This centers the table*/
+	margin-left:auto; 
+    margin-right:auto;
+}
+th, td {
+  padding: 8px;
+}
+.col {
+  flex: 1;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: center;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
+.centerText{
+   text-align: center;
+}

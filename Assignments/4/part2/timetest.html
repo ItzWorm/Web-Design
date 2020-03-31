@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>(Type a title for your page here)</title>
+<script type="text/javascript"> 
+function displayClock(){
+	var refresh=1000; // Refresh rate in milli seconds
+	mytime=setTimeout('getTime()',refresh)
+}
+
+function getTime() {
+	var x = new Date()
+	var x1 = x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
+	document.getElementById('ct').innerHTML = x1;
+	displayClock();
+}
+</script>
+</head>
+
+<body onload=getTime();>
+<span id='ct' ></span>
+
+</body>
+</html>

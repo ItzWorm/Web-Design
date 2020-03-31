@@ -1,0 +1,64 @@
+<html>
+<head>
+	<div class="centerText">
+	<title>HW Assignment4:P3</title>
+	<H2>Homework Assignment 4: Part 3 <br>Matching Game</H2>
+	<link rel="stylesheet" type="text/css" href="./act6style.css" title="style" />
+	<script src="sounds.js" type="text/javascript"></script>
+	<script src="matching.js"></script>
+	</div>
+</head>
+
+
+<body>
+
+<div class="flex-grid">
+	<!-- This is a space holder -->
+  <div class="littleCol"></div>
+  <!-- Call the script here to put it in the middle 3rd of the screen -->
+  <div class="column centerText">
+  
+  			<label>Pairs of Cards</label>
+			<select id="pairSelect" name="pairSelect" class="dropBtn">
+			   <option value="eight" class="dropItem">8 Pairs</option>
+			   <option value="ten" class="dropItem">10 Pairs</option>
+			   <option value="twelve" class="dropItem">12 Pairs</option>
+			</select> 
+
+		   <label>Difficulty</label> 
+		   <select id="difSelect" name="difSelect" class="dropBtn">
+			   <option value="easy" class="dropItem">Easy</option>
+			   <option value="moderate" class="dropItem">Moderate</option>
+			   <option value="hard" class="dropItem boldFont"><s>Hard</s></option>
+		   </select> 
+		   <br><br><button onclick="startGame();">Start Game</button><br>
+	<div class="timerFont">
+	 Timer: <span id="timerPrint"></span></b>
+	<br><br>
+	
+	</div>
+	
+  <span id="printHere"></span>
+  <br>
+  <div class="mainContain">
+  <p id="summary"></p>
+  <p>Welcom to my matching game!<br>The theme of the game is: "Things you can't do during a pandemic". 
+  The goal is to match all the pairs before the time runs out. 
+  The amount of time given is based on the number of pairs selected. When the game starts players are
+  given a short period of time to memorize the card placement. When matching cards are selected they
+  are removed from the game board. When all cards are matched or the time runs out the game ends.<br>
+  
+  The score is calculated by adding the time remaining on the counter when a match is found. So the faster you answer the higher your score!
+  </div>
+  </div>
+  <script> drawGrid();
+  
+  </script>
+
+  
+  <!-- This is a also space holder -->
+  <div class="littleCol"></div>
+</div>
+
+</body>
+</html>

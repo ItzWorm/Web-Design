@@ -1,0 +1,50 @@
+<html>
+<head>
+
+<!-- Use sounds from https://flukeout.github.io/simple-sounds/#-->
+<script src="sounds.js" type="text/javascript"></script>
+<script src="guessGame.js" type="text/javascript"></script>
+
+	<div class="centerText">
+	<title>HW Assignment4:P2</title>
+	<H2>Homework Assignment 4: Part 2 <br>Guessing Game</H2>
+	<link rel="stylesheet" type="text/css" href="./style.css" title="style" />
+	</div>
+	
+</head>
+<!-- Start clock when the page loads -->
+<body onload="getTime();">
+
+
+
+
+<div class="flex-grid-thirds">
+	<!-- This is a space holder -->
+  <div class="col"></div>
+  <!-- Call the script here to put it in the middle 3rd of the screen -->
+  <div class="col centerText">
+  
+	<!-- Span for showing the time -->
+	Time: <span id="clock"></span><br><br>
+	
+	<button onclick="randNumGen();">Start Game</button>
+	<p id="printStart"></p>
+	
+    <form id="guessForm">
+	<label for="numGuess"> Enter Guess: </label>
+  <input type="text" name="numGuess" id="numGuess" maxlength="3" size="4" value="(1-100)" ><br>
+ 
+	</form> 
+	<button onclick="checkGuess();">Guess</button>
+  
+  
+  <p id="printStuff"></p>
+  
+  </div>
+  
+  <!-- This is a also space holder -->
+  <div class="col"></div>
+</div>
+
+</body>
+</html>
