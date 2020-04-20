@@ -1,0 +1,111 @@
+<html>
+<head>
+	<div class="centerText">
+	<title>HW Assignment5:Index</title>
+	<H2>Homework Assignment 5: <br> mySQL and PHP</H2>
+	<link rel="stylesheet" type="text/css" href="./act6style.css" title="style" />
+	</div>
+</head>
+
+
+<body>
+
+
+
+<div class="flex-grid">
+	<!-- This is a space holder -->
+  <div class="littleCol"></div>
+  
+  <!-- Call the script here to put it in the middle 3rd of the screen -->
+  <div class="column centerText">
+	Part A:
+  <div class="mainContain">
+	This part of the project is a main page that ties the website together. <br>
+	  <a href="main.html"><button>main.html</button></a><br>
+	    <b>Result:</b><br>
+	<img src="./CaptureA.png" alt="View of main page" class="picWidth">
+  </div>
+
+
+
+	Part 1:
+  <div class="mainContain">
+  <b>Code:</b><br> 
+		<code>
+	CREATE TABLE nikeproducts ( <br>
+	PurchaseNo INT(11) AUTO_INCREMENT, <br>
+	SupplierID INT(11) DEFAULT NULL, <br>
+	Date DATE NOT NULL,<br>
+	Quantity SMALLINT(2) DEFAULT 0,<br>
+	Description VARCHAR(40) DEFAULT NULL,<br>
+	Price DECIMAL(10,4)  DEFAULT 0.0000,<br>
+	PRIMARY KEY(PurchaseNo)<br>
+);<br>
+
+</code>
+  </div>
+  
+  <br>
+  	Part 2:
+  <div class="mainContain">
+  <b>Code:</b><br> 
+		<code>
+INSERT INTO `nikeproducts` (`PurchaseNo`, `SupplierID`, `Date`, `Quantity`,<br>
+`Description`, `Price`) VALUES<br>
+(100, 101, '2010-03-01', 100, 'T-shirts Blue XL', '4.5200'),<br>
+(101, 102, '2010-03-01',  30, 'T-shirts Red L', '3.4400'),<br>
+(102, 103, '2010-03-04',  45, 'Assorted Band Logos', '0.6000'),<br>
+(103, 101, '2010-03-06', 200, 'T-shirts Black L', '4.7000'),<br>
+(104, 101, '2010-03-07', 150, 'T-shirts Black XL', '4.6000'),<br>
+(105, 104, '2010-03-10', 190, 'T-shirts Blue L Longsleeved', '5.6000'),<br>
+(106, 101, '2010-03-15',  60, 'T-shirts Blue XL', '4.5200'),<br>
+(107, 103, '2010-03-21',  15, 'Assorted Band Logos', '0.6000'),<br>
+(108, 101, '2010-03-22',  55, 'T-shirts Red L', '3.7000'),<br>
+(109, 105, '2010-03-22',  50, 'Assorted Band Logos', '0.7000'),<br>
+(110, 102, '2010-03-22',  40, 'T-shirts Blue L Longsleeved', '5.3000'),<br>
+(111, 101, '2010-03-25', 140, 'T-shirts Blue S', '4.1200'),<br>
+(112, 102, '2010-03-27',  10, 'T-shirts Red XL Longsleeved', '5.1000'),<br>
+(113, 101, '2010-03-28',  15, 'Assorted Band Logos', '0.8000'),<br>
+(114, 102, '2010-03-30',  25, 'T-shirts Blue XL', '4.6000');<br>
+</code>
+  </div>
+  
+	<br>
+  	Part 3:
+  <div class="mainContain">
+	This part queries the DB for all data in all entries <br>
+	  <a href="display.php"><button>Display.php</button></a><br>
+  <b>Result:</b><br>
+	<img src="./Capture3.png" alt="Result of loading display.php" class="picWidth">
+  </div>
+  
+	<br>
+  	Part 4:
+  <div class="mainContain">
+	This part provides an form interface for creating new DB entries<br>
+	  <a href="newpurchase.html"><button>newpurchase.html</button></a><br>
+  <b>Result:</b><br>
+	<img src="./Capture4.png" alt="New purchase record interface" class="picWidth">
+  </div>
+  
+	<br>
+  	Part 5a:
+  <div class="mainContain">
+	This part provides an form interface for searching the DB by Supplier ID<br>
+	  <a href="query.html"><button>query.html</button></a><br>
+  <b>Result:</b><br>
+	<img src="./Capture4a.png" alt="Query page" class="picWidth">
+	  <b>Result:</b><br>
+	<img src="./Capture4b.png" alt="Result of good query" class="picWidth">
+	  <b>Result:</b><br>
+    <img src="./Capture4c.png" alt="Result of bad query" class="picWidth">
+  </div>
+  
+
+  </div>
+  <!-- This is a also space holder -->
+  <div class="littleCol"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+   <head>
+      <title>HW Assignment5:P5</title>
+      <link href="style2.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="pageContainer">
+
+				<div class="headContainer">
+					<div class="headFlex">
+					<img src="swoosh.png" alt="Nike swoosh logo" width="300">
+					</div>
+					
+					<h2 class="centerText">Homework Assignment 5<br>Part 5: Database Query</h2>
+					
+					<div class="headFlex">
+					<img src="jordan.png" alt="Nike Air Jordan logo" width="300">
+					</div>
+				</div>
+			
+			<!-- This navigation bar is borrowed from the miniproject -->
+			<div class="centerText">
+			<div clas="navContain">
+				<a href="main.html"><button class="button">Home Page</button></a>
+				<a href="display.php"><button class="button">View Records</button></a>
+				<a href="newpurchase.html"><button class="button">Create Purchase</button></a>
+				<a href="query.html"><button class="button">Search Suppliers</button></a>
+			</div>
+			</div>
+			
+		 <p class="centerText">Nike Supplier Purchases<br>Query Form</p>
+         <form action="query.php" method="post" class="formLayout" >
+			<div class="formGroup">
+               <label>Supplier ID:</label>
+               <input type="number" name="supplierid" class="textbox" autofocus required  
+                      placeholder="ex: 123" title="Supplier ID" size="4" maxlength="4" min="0"/>
+					 <!-- ^ HTML validation is done here ^ -->
+
+            <div class="centerText">
+               <input type="submit" value="Search Records">
+				</form>
+            </div>
+
+      </div>
+
+</div>
+</body>
+</html>

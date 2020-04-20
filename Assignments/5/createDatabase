@@ -1,0 +1,79 @@
+PART1:
+CREATE TABLE purchases ( 
+	PurchaseNo INT(11) AUTO_INCREMENT, 
+	SupplierID INT(11) DEFAULT NULL, 
+	Date DATE NOT NULL,
+	Quantity SMALLINT(2) DEFAULT 0,
+	Description VARCHAR(40) DEFAULT NULL,
+	Price DECIMAL(10,4)  DEFAULT 0.0000,
+	PRIMARY KEY(PurchaseNo)
+);
+
+Part2:
+INSERT INTO `nikeproducts` (`PurchaseNo`, `SupplierID`, `Date`, `Quantity`,
+`Description`, `Price`) VALUES
+(100, 101, '2010-03-01', 100, 'T-shirts Blue XL', '4.5200'),
+(101, 102, '2010-03-01',  30, 'T-shirts Red L', '3.4400'),
+(102, 103, '2010-03-04',  45, 'Assorted Band Logos', '0.6000'),
+(103, 101, '2010-03-06', 200, 'T-shirts Black L', '4.7000'),
+(104, 101, '2010-03-07', 150, 'T-shirts Black XL', '4.6000'),
+(105, 104, '2010-03-10', 190, 'T-shirts Blue L Longsleeved', '5.6000'),
+(106, 101, '2010-03-15',  60, 'T-shirts Blue XL', '4.5200'),
+(107, 103, '2010-03-21',  15, 'Assorted Band Logos', '0.6000'),
+(108, 101, '2010-03-22',  55, 'T-shirts Red L', '3.7000'),
+(109, 105, '2010-03-22',  50, 'Assorted Band Logos', '0.7000'),
+(110, 102, '2010-03-22',  40, 'T-shirts Blue L Longsleeved', '5.3000'),
+(111, 101, '2010-03-25', 140, 'T-shirts Blue S', '4.1200'),
+(112, 102, '2010-03-27',  10, 'T-shirts Red XL Longsleeved', '5.1000'),
+(113, 101, '2010-03-28',  15, 'Assorted Band Logos', '0.8000'),
+(114, 102, '2010-03-30',  25, 'T-shirts Blue XL', '4.6000');
+
+
+INSERT INTO `nikeproducts` (`PurchaseNo`, `SupplierID`, `Date`, `Quantity`,
+`Description`, `Price`) VALUES
+(150, 101, '2010-03-01', 100, 'TESTTEST', '4.5200');
+
+Part3:
+SELECT ProductName, QuantityPerUnit FROM products;
+
+Part4:
+SELECT ProductID, ProductName FROM products 
+WHERE Discontinued = "0";
+
+Part5:
+SELECT ProductID, ProductName FROM products 
+WHERE Discontinued = "1";
+
+Part6:
+SELECT ProductName, UnitPrice FROM products ORDER BY UnitPrice ASC;
+
+SELECT ProductName, UnitPrice FROM products 
+WHERE UnitPrice = (SELECT MAX(UnitPrice) FROM products) OR UnitPrice =(SELECT MIN(UnitPrice) FROM products);
+
+Part7:
+SELECT ProductID, ProductName, UnitPrice FROM products
+WHERE (((UnitPrice)<20) AND ((Discontinued)=False));
+
+Part8:
+SELECT ProductID, ProductName, UnitPrice FROM products
+WHERE (((UnitPrice)<=25) AND ((UnitPrice)>=15) AND ((Discontinued)=False));
+
+Part9:
+SELECT ProductName, UnitPrice FROM products
+WHERE ((UnitPrice > (SELECT AVG(UnitPrice) FROM products)) AND (Discontinued=False));
+
+SELECT ProductName, UnitPrice FROM products
+WHERE (UnitPrice > (SELECT AVG(UnitPrice) FROM products));
+
+Part10:
+SELECT DISTINCT ProductName as Ten_Most_Expensive_Products, UnitPrice FROM products AS a
+WHERE 10 >= (SELECT COUNT(DISTINCT UnitPrice) FROM products AS b
+             WHERE b.UnitPrice >= a.UnitPrice);
+
+Part11:
+SELECT Count(ProductName) FROM products
+GROUP BY Discontinued;
+
+Part12:
+SELECT ProductName,  UnitsOnOrder , UnitsInStock FROM products
+WHERE (((Discontinued)=False) AND ((UnitsInStock)<UnitsOnOrder));

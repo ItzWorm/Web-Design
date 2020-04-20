@@ -1,0 +1,99 @@
+table, th, td {
+  border: 1px solid black;
+}
+table {
+	/*This centers the table*/
+	margin-left:auto; 
+    margin-right:auto;
+}
+th {
+	white-space: nowrap;
+}
+
+/* I had to look up how to do this on stackoverflow*/
+tr:nth-child(odd)   { 
+	background-color:#D6D6D6; 
+}
+
+th, td {
+  padding: 8px;
+  min-width: 75px;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.navContain{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.button {
+    background-color: #2A2827; /* grey background */
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.pageContainer {
+   width:80%; 
+   max-width: 800px;
+   margin:7px auto; 
+   padding:25px; 
+   border:1px black solid; 
+   background:white;
+   min-height: 500px;
+   border-radius: 10px;
+}
+.headContainer{
+	display: flex;
+	vertical-align: baseline ;
+}
+
+.headFlex{
+	vertical-align: baseline ;
+}
+/*.headContainer{
+	display: flex;
+	justify-content: space-between;
+	vertical-align: baseline ;
+}
+
+.headFlex{
+	width: 32%;
+	vertical-align: baseline ;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+*/
+.headMax{
+	width:75%;
+}
+
+.col {
+  flex: 1;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: center;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+
+.centerText{
+   text-align: center;
+   margin: 0 auto;
+   justify-content: center;
+   vertical-align: baseline ;
+}

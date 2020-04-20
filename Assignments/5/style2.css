@@ -1,0 +1,110 @@
+html {
+   background: url(/sandvig/images/bg_white_parchment.jpg);
+   /*      background: url(/sandvig/images/bg_seahawk1gradient2.png);
+         background-repeat: repeat-x;*/
+
+   /* background-size: 100% 100%; */
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-size: large;
+}
+
+   /* This helps images scale for the page their on */
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.navContain{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.button {
+    background-color: #2A2827; /* grey background */
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.pageContainer {
+   width:80%; 
+   max-width: 800px;
+   margin:7px auto; 
+   padding:25px; 
+   border:1px black solid; 
+   background:white;
+   min-height: 500px;
+   border-radius: 10px;
+}
+.headContainer{
+	display: flex;
+	vertical-align: baseline ;
+}
+
+.headFlex{
+	vertical-align: baseline ;
+}
+
+.centerText, center
+{
+   text-align: center;
+}
+.myForm, .formLayout
+{
+   width:90%;
+   margin:0 auto;
+   text-align: left;
+   padding:3%;
+   border-radius: 6px; 
+   border: 1px solid #CCCCCC; 
+}
+.formGroup
+{
+   margin:10px 0;  
+
+}
+
+.formLayout label
+{
+   width:34%;
+   padding:1% 3%;
+   display: inline-block;
+   text-align: right;
+   vertical-align: top;
+   clear:left;
+}
+
+.formLayout input, .formLayout textarea, .formElements
+{
+   
+   border: 1px solid #CCCCCC; 
+   border-radius: 4px;
+   color: #555555;
+   font-size:x-large;
+}
+
+.formLayout option
+{
+   padding:2px 6px;
+}
+
+.formLayout submit, .formLayout input[type=submit]
+{
+   width:50%;
+   height:auto;
+   background: linear-gradient(#ffffff, #e6e6e6);
+}
+
+.formLayout input[type=submit]:hover{
+   background:#e6e6e6;
+}
